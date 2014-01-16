@@ -1,0 +1,22 @@
+<div class="new-twoot-frame" ng-include="'/views/newTwoot.html'"></div>
+
+<div class="twoots-list">
+  <h3>Showing {{ twoots.length }} twoots</h3>
+
+  <div class="twoot-search-filter">
+    <small>Search twoots:</small>
+    <input type="text" ng-model="twootSearch">
+    <a class="button" ng-click="twootSearch = ''">
+      Clear
+    </a>
+
+    <div class="twoot-search-active" ng-show="twootSearch">
+      <small>Showing filtered results.</small>
+    </div>
+  </div>
+
+  <a href="#/twoot/{{ twoot.id }}"
+    class="twoot-wrapper"
+    ng-repeat="twoot in twoots | filter:twootSearch"
+    ng-include="'/views/twoot.html'"></a>
+</div>

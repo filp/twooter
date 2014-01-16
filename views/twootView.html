@@ -1,0 +1,16 @@
+<div class="options-panel">
+  <a href="#/">« Go back</a>
+</div>
+
+<div class="twoot-reply-origin" ng-include="'/views/twoot.html'"></div>
+<div class="twoot-replies-inline" ng-show="replies">
+  <div class="twoot-reply-to-this"
+    ng-repeat="twoot in replies"
+    ng-include="'/views/twoot.html'">
+  </div>
+</div>
+
+<div class="twoot-reply-frame">
+  <div class="new-twoot-frame" ng-include="'/views/newTwoot.html'"
+    ng-controller="ReplyToTwootController" ></div>
+</div>

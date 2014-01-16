@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="twooter" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Twooter</title>
+    <link href="css/application.css" rel="stylesheet">
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
+    <script src="js/application.js"></script>
+  </head>
+  <body ng-controller="ApplicationController">
+    <header class="application-header">
+      <img src="twooter.png">
+    </header>
+    <div class="messages">
+      <div ng-repeat="message in activeMessages" 
+        class="message message-{{ message.type}}">{{ message.text }}</div>
+    </div>
+    <div class="application-body" ng-view></div>
+  </body>
+</html>

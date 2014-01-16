@@ -1,0 +1,180 @@
+body {
+  color: #183125;
+  font: 16px "Droid Sans", arial, sans-serif;
+}
+
+textarea, input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid #ccc;
+  padding: 20px;
+
+  border-radius: 3px;
+  box-shadow: inset 0 3px 12px rgba(0, 0, 0, .05);
+
+  font-size: 22px;
+  font-family: georgia, serif;
+  color: #424242;
+}
+  textarea:focus, input:focus {
+    outline: none;
+  }
+
+  input[type="text"] {
+    padding: 6px;
+    font-size: 16px;
+
+    width: auto;
+    font: inherit;
+  }
+
+form {}
+  .form-hint {
+    color: #5A5A5A;
+  }
+
+  .form-action {
+    text-align: right;
+  }
+
+  button, .button {
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    color: white;
+    background: #086397;
+
+    font: inherit;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+    button:hover, .button:hover {
+      background: #7BA6FF;
+    }
+
+    .button {
+      font-size: small;
+      padding: 3px 6px;
+    }
+
+.application-body, .application-header, .messages {
+  margin: 30px auto;
+  max-width: 60%;
+  min-width: 480px;
+}
+
+.message {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+  .message:not(:last-child) { margin-bottom: 5px; }
+  .message-success {
+    border-color: #7FE3B0;
+    color: #7FE3B0;
+  }
+  .message-error {
+    border-color: red;
+    color: red;
+  }
+
+.options-panel {
+  margin: 10px 0 20px 0;
+}
+  .options-panel a {
+    border: 1px solid #ccc;
+    padding: 3px 6px;
+    border-radius: 3px;
+    text-decoration: none;
+
+    color: #5A5A5A;
+  }
+
+.twoot {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+}
+  .twoot-wrapper { text-decoration: none; }
+  .twoot-author {
+    color: #ccc;
+    font-size: small;
+  }
+
+  .twoot-id {
+    font-size: smaller;
+    float: right;
+    position: relative;
+    right: 0;
+    color: #ccc;
+  }
+
+  .twoot-content {
+    margin-top: 10px;
+    font-size: 22px;
+    font-family: georgia, serif;
+    color: #424242;
+  }
+
+  .twoot-replies-frame {
+    text-align: right;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .twoot-replies {
+    color: #5A5A5A;
+  }
+    .twoot-replies-list {
+      display: block;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      display: inline-block;
+    }
+
+      .twoot-replies-list li {
+        display: inline-block;
+      }
+
+      .twoot-replies-list li:not(:last-child):after {
+        content: ",";
+      }
+
+  .twoot-in-reply-to {
+    font-size: small;
+    color: #5A5A5A;;
+    margin: 10px 0;
+  }
+    .twoot-in-reply-to:before {
+      float: left;
+      content: "<";
+      font-size: 18px;
+      display: inline-block;
+      margin-top: -3px;
+      margin-right: 5px;
+      font-weight: bold;
+
+      color: #ccc;
+    }
+
+    .twoot-replies-inline {
+      padding: 20px;
+      background: #EFEFEF;
+
+      margin: 20px 0;
+      border: 1px solid rgba(0, 0, 0, .1);
+    }
+      .twoot-replies-inline .twoot {
+        background: white;
+        box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+      }
+
+.tag {
+  color: #FF05A8;
+  font-weight: bold;
+  text-decoration: none;
+}

@@ -1,0 +1,10 @@
+<form name="newTwootForm" ng-controller="NewTwootController">
+  <textarea ng-model="newTwoot.content"></textarea>
+  <div class="form-hint">
+    <small>{{ maxLength - newTwoot.content.length }} characters remaining</small> 
+  </small>
+
+  <div class="form-action">
+    <button ng-click="submitTwoot()">Twoot!</button>
+  </div>
+</form>

@@ -1,0 +1,22 @@
+<div class="twoot" id="{{ twoot.id }}">
+  <span class="twoot-id">#{{ twoot.id }}</span>
+  <div class="twoot-author">
+    {{ twoot.author.name }}
+  </div>
+
+  <div ng-show="twoot.replyTo" class="twoot-in-reply-to">
+  In reply to <a href="#/twoot/{{ twoot.replyTo }}">#{{ twoot.replyTo }}</a>
+  </div>
+
+  <div class="twoot-content"
+    ng-bind-html="twoot.content | linky | tags"></div>
+
+  <div class="twoot-replies-frame" ng-show="twoot.replies">
+    <small class="twoot-replies">{{ twoot.replies.length | number: 0 }} REPLIES</small>
+    <ul ng-show="twoot.replies" class="twoot-replies-list">
+      <li ng-repeat="twootId in twoot.replies">
+        <a href="#/twoot/{{ twootId }}" class="twoot-reply-link">#{{ twootId }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
